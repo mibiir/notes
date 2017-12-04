@@ -1,0 +1,10 @@
+{% extends 'notes/base.html' %}
+
+
+    {% block left-content %}
+        <a id="back-link" href="{% url 'notes' note.id %}">Back</a>
+    {% endblock left-content %}
+
+{% block right-content %}
+    {{ note.note }}
+{% endblock right-content %}

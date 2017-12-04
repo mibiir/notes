@@ -1,0 +1,37 @@
+{% load static %}
+
+
+<html>
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <title>My Personal Notes</title>
+        <link href="{% static 'notes/css/animate.css' %}" rel="stylesheet">
+        <script src="{% static 'notes/js/jquery.min.js' %}"></script>
+        <script src="{% static 'notes/js/jquery.fittext.js' %}"></script>
+        <script src="{% static 'notes/js/jquery.lettering.js' %}"></script>
+        <script src="{% static 'notes/js/highlight.min.js' %}"></script>
+        <script src="{% static 'notes/js/jquery.textillate.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'notes/css/notes.css' %}" />
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#welcome').textillate({ in: { effect: 'rollIn' }});
+            });
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <h1><a id="welcome" href="{% url 'categories' %}">Welcome To My Personal Notes.</a></h1>
+        </div>
+        <div id="menu">
+            <a class="a-home" href="{% url 'categories' %}">Home</a>
+            <a class="a-home" href="{% url 'categories' %}">ContactUs</a>
+            <a class="a-home" href="{% url 'categories' %}">About</a>
+        </div>
+          <div id="content-div">{% block content %} {% endblock content %}</div>
+        <div id="footer">
+            <h5 class="rainbow">All rights reserved.</h5>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+html, body {
+    width: 960px;
+    margin: 0 auto;
+
+}
+h1,h5{
+   /* text-align: center; */
+}
+
+.rainbow{
+     animation: rainbow 2s infinite;
+}
+@keyframes rainbow{
+    15%{color: red}
+	30%{color: orange;}
+	45%{color: yellow;}
+	60%{color: green;}
+	75%{color: lightblue;}
+    85%{color: blue}
+    100%{color: purple;}
+}
+
+#header {
+    background-image: linear-gradient(cadetblue, olive);
+    text-align: center;
+    border: groove;
+    border-radius: 5px;
+    margin: auto;
+
+
+}
+
+
+#welcome:link, #welcome:visited{
+    text-decoration: none;
+    opacity: 0.6;
+
+}
+
+#welcome:hover{
+     opacity: 1;
+     color: snow;
+}
+
+#menu{
+    background-color: goldenrod;
+    padding: 5px;
+    border-radius: 5px;
+    word-spacing: 15px;
+
+
+}
+
+.a-home {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.a-home::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+    display: block;
+
+}
+
+.a-home:hover::after{
+    width: 100%;
+
+}
+
+.left-div {
+    height: 100%;
+    width: 15%;
+    text-align: left;
+    background-color: lightseagreen;
+    border: dashed;
+    border-radius: 5px;
+    padding: 5px;
+    float: left;
+}
+
+.left-links:link, .left-links:visited {
+    text-decoration: none;
+    color: darkslategray;
+    background: pink;
+    padding: 6%;
+    border: outset;
+    border-radius: 5px;
+
+}
+
+.left-links:hover{
+    color: lightseagreen;
+    border: inset;
+
+}
+
+.right-div {
+    float: right;
+    height: 100%;
+    width: 81%;
+    background-image: radial-gradient(gray, white);
+    padding-left: 18px;
+    padding-bottom: 12px;
+    border: groove;
+    border-radius: 5px;
+    border-left: hidden;
+    border-bottom: hidden;
+}
+
+#back-link:link, #back-link:visited {
+    text-decoration: none;
+    background-color: darkgreen;
+    padding: 2px;
+    color: white;
+    border: outset;
+}
+
+#back-link:hover {
+    color: white;
+    border: inset;
+}
+
+#content-div {
+
+    background-color: burlywood;
+    height: 100%;
+    width: 100%;
+}
+
+#notes-links {
+    text-decoration: none;
+}
+#footer {
+    clear: both;
+    background-image: radial-gradient(black, white);
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center;
+    border: double;
+}
+
